@@ -15,7 +15,7 @@ This repo has a dockerfile to manage dependencies and has a few scripts to detec
 ## Quickstart
 
 - build/run docker image (requires root and working docker)
-  - ```motoOCR$ sudo docker build -t motofoto:latest .
+```motoOCR$ sudo docker build -t motofoto:latest .
 [+] Building 197.6s (11/11) FINISHED                                                                                                               docker:default
  => [internal] load .dockerignore                                                                                                                            0.0s
  => => transferring context: 2B                                                                                                                              0.0s
@@ -34,6 +34,12 @@ This repo has a dockerfile to manage dependencies and has a few scripts to detec
  => => exporting layers                                                                                                                                     19.5s 
  => => writing image sha256:19513d0dea0c4455e1a2930aebcdaddbf9c1d30e02b8e4ea8f4e375fb6a03f64                                                                 0.0s 
  => => naming to docker.io/library/motofoto:latest                                                                                                           0.0s ```
-  - ```motoOCR$ sudo docker run -v /mnt:/mnt -it motofoto:latest bash
+  - run script to process jpgs in dir
+
+```motoOCR$ sudo docker run -v /mnt:/mnt -it motofoto:latest bash
 root@36abc9bcede1:/# 
+root@36abc9bcede1:~# cd /opt/code/ 
+root@36abc9bcede1:/opt/code# ls
+findOCR.py  processDir.sh  test.py
+root@36abc9bcede1:/opt/code# bash processDir.sh /mnt/DCIM/some_dir_of_jpgs
 ```
