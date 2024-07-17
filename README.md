@@ -14,29 +14,32 @@ This repo has a dockerfile to manage dependencies and has a few scripts to detec
 
 ## Quickstart
 
-- build/run docker image (requires root and working docker)
+- build/run the docker image (requires root and working docker) - this is also mounting /data0/test-pics into the /mnt directory for later
 ```motoOCR$ sudo docker build -t motofoto:latest .
-[+] Building 197.6s (11/11) FINISHED                                                                                                               docker:default
+motoOCR$ sudo docker build -t motofoto .
+[+] Building 177.4s (11/11) FINISHED                                                                                                               docker:default
+ => [internal] load build definition from Dockerfile                                                                                                         0.0s
+ => => transferring dockerfile: 301B                                                                                                                         0.0s
  => [internal] load .dockerignore                                                                                                                            0.0s
  => => transferring context: 2B                                                                                                                              0.0s
- => [internal] load build definition from Dockerfile                                                                                                         0.0s
- => => transferring dockerfile: 290B                                                                                                                         0.0s
  => [internal] load metadata for docker.io/library/ubuntu:22.04                                                                                              0.0s
- => [internal] load build context                                                                                                                            0.0s
- => => transferring context: 1.13kB                                                                                                                          0.0s
  => [1/6] FROM docker.io/library/ubuntu:22.04                                                                                                                0.0s
+ => [internal] load build context                                                                                                                            0.0s
+ => => transferring context: 630B                                                                                                                            0.0s
  => CACHED [2/6] RUN apt -y update && apt -y upgrade                                                                                                         0.0s
  => CACHED [3/6] RUN apt -y install python3-pip vim tmux imagemagick ffmpeg libsm6 libxext6                                                                  0.0s
- => [4/6] RUN pip3 install paddleocr paddlepaddle paddlepaddle-gpu exif rasterio                                                                           177.6s
- => [5/6] RUN mkdir -p /opt/code                                                                                                                             0.4s
- => [6/6] COPY scripts /opt/code                                                                                                                             0.1s 
- => exporting to image                                                                                                                                      19.5s 
- => => exporting layers                                                                                                                                     19.5s 
- => => writing image sha256:19513d0dea0c4455e1a2930aebcdaddbf9c1d30e02b8e4ea8f4e375fb6a03f64                                                                 0.0s 
- => => naming to docker.io/library/motofoto:latest                                                                                                           0.0s 
+ => [4/6] RUN pip3 install paddleocr paddlepaddle paddlepaddle-gpu exif rasterio pyexiftool                                                                155.0s
+ => [5/6] RUN mkdir -p /opt/code                                                                                                                             0.5s
+ => [6/6] COPY scripts /opt/code                                                                                                                             0.0s 
+ => exporting to image                                                                                                                                      21.7s 
+ => => exporting layers                                                                                                                                     21.7s 
+ => => writing image sha256:756a2bb9a1f7437e0b99255572375317da1497127f571832917aeb07a897880f                                                                 0.0s 
+ => => naming to docker.io/library/motofoto                                                                                                                  0.0s 
+motoOCR$ sudo docker run -v /data0/test-pics:/mnt -it motofoto bash
+root@5d5100c36c94:/#
 ```
 
-- run script to process jpgs in dir
+- run the script to process jpgs in directory (change this to whatever you want to process for normal non demo use)
 
 
 ```motoOCR$ sudo docker run -v /mnt:/mnt -it motofoto:latest bash
@@ -105,5 +108,15 @@ Open to Public
 FIBRE HERE
 Free Admission
 04
+```
+
+- running the script against a mounted volume
+
+```
+
+root@5d5100c36c94:/opt/code# bash processDir.sh /mnt/clientDownloads-9Md3LxSxC-part-1
+Processing /mnt/clientDownloads-9Md3LxSxC-part-1/2024-03-10 HBMC DES A 1030am-0054.jpg - Image Number: 0
+/mnt/clientDownloads-9Md3LxSxC-part-1/2024-03-10 HBMC DES A 1030am-0054.jpg
+ 
 
 ```
