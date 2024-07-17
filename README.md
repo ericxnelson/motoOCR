@@ -44,5 +44,79 @@ root@36abc9bcede1:/#
 root@36abc9bcede1:~# cd /opt/code/ 
 root@36abc9bcede1:/opt/code# ls
 findOCR.py  processDir.sh  test.py
-root@36abc9bcede1:/opt/code# bash processDir.sh /mnt/DCIM/some_dir_of_jpgs
+root@a37c8e979306:/opt/code# bash processDir.sh imgs_en
+Processing imgs_en/254.jpg - Image Number: 0
+imgs_en/254.jpg
+download https://paddleocr.bj.bcebos.com/PP-OCRv3/english/en_PP-OCRv3_det_infer.tar to /root/.paddleocr/whl/det/en/en_PP-OCRv3_det_infer/en_PP-OCRv3_det_infer.tar
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 4.00M/4.00M [00:28<00:00, 143kiB/s]
+download https://paddleocr.bj.bcebos.com/PP-OCRv3/english/en_PP-OCRv3_rec_infer.tar to /root/.paddleocr/whl/rec/en/en_PP-OCRv3_rec_infer/en_PP-OCRv3_rec_infer.tar
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 9.96M/9.96M [00:17<00:00, 577kiB/s]
+download https://paddleocr.bj.bcebos.com/dygraph_v2.0/ch/ch_ppocr_mobile_v2.0_cls_infer.tar to /root/.paddleocr/whl/cls/ch_ppocr_mobile_v2.0_cls_infer/ch_ppocr_mobile_v2.0_cls_infer.tar
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2.19M/2.19M [00:14<00:00, 149kiB/s]
+PHOCAPITAL
+107 State Street
+Montpelier Vermont
+802 225 6183
+REG
+07-24-2017 06:59 PM
+045555
+CT
+T1
+$7.95
+1 F00D
+T1
+$3.95
+1F00D
+T1
+$9.50
+1F00D
+3 No
+$21.40
+TA1
+$1.92
+TX1
+TL
+$23.32
+$23.32
+CASH
+THANK YOU
+FOR YOUR BUSINESS
+Processing imgs_en/img623.jpg - Image Number: 1
+imgs_en/img623.jpg
+XA
+YA
+RIBS
+www.flavoursofiloilo.blogspot.com
+Processing imgs_en/img_10.jpg - Image Number: 2
+imgs_en/img_10.jpg
+Please lower your volume
+When you pass by
+residential oreas
+Processing imgs_en/img_11.jpg - Image Number: 3
+imgs_en/img_11.jpg
+BEWARE OF
+MAINTENANCE
+VEHICLES
+Processing imgs_en/img_12.jpg - Image Number: 4
+imgs_en/img_12.jpg
+ACKNOWLEDGEMENTS
+Traceback (most recent call last):
+  File "/opt/code/./findOCR.py", line 29, in <module>
+    writeExif(txts,sourcefile)
+  File "/opt/code/./findOCR.py", line 15, in writeExif
+    et.set_tags(
+  File "/usr/local/lib/python3.10/dist-packages/exiftool/helper.py", line 484, in set_tags
+    return self.execute(*exec_params)
+  File "/usr/local/lib/python3.10/dist-packages/exiftool/helper.py", line 135, in execute
+    raise ExifToolExecuteError(self._last_status, self._last_stdout, self._last_stderr, str_bytes_params)
+exiftool.exceptions.ExifToolExecuteError: execute returned a non-zero exit status: 1
+Processing imgs_en/img_195.jpg - Image Number: 5
+imgs_en/img_195.jpg
+JEXPERIENCE
+EXPERIENCE
+Open to Public
+FIBRE HERE
+Free Admission
+04
+
 ```
