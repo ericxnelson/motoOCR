@@ -97,19 +97,6 @@ imgs_en/img_11.jpg
 BEWARE OF
 MAINTENANCE
 VEHICLES
-Processing imgs_en/img_12.jpg - Image Number: 4
-imgs_en/img_12.jpg
-ACKNOWLEDGEMENTS
-Traceback (most recent call last):
-  File "/opt/code/./findOCR.py", line 29, in <module>
-    writeExif(txts,sourcefile)
-  File "/opt/code/./findOCR.py", line 15, in writeExif
-    et.set_tags(
-  File "/usr/local/lib/python3.10/dist-packages/exiftool/helper.py", line 484, in set_tags
-    return self.execute(*exec_params)
-  File "/usr/local/lib/python3.10/dist-packages/exiftool/helper.py", line 135, in execute
-    raise ExifToolExecuteError(self._last_status, self._last_stdout, self._last_stderr, str_bytes_params)
-exiftool.exceptions.ExifToolExecuteError: execute returned a non-zero exit status: 1
 Processing imgs_en/img_195.jpg - Image Number: 5
 imgs_en/img_195.jpg
 JEXPERIENCE
