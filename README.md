@@ -113,10 +113,17 @@ Free Admission
 - running the script against a mounted volume
 
 ```
-
+root@5d5100c36c94:/# cd /opt/code
 root@5d5100c36c94:/opt/code# bash processDir.sh /mnt/clientDownloads-9Md3LxSxC-part-1
 Processing /mnt/clientDownloads-9Md3LxSxC-part-1/2024-03-10 HBMC DES A 1030am-0054.jpg - Image Number: 0
 /mnt/clientDownloads-9Md3LxSxC-part-1/2024-03-10 HBMC DES A 1030am-0054.jpg
- 
-
+Processing /mnt/clientDownloads-9Md3LxSxC-part-1/2024-03-10 HBMC DES A 1030am-0055.jpg - Image Number: 1
+/mnt/clientDownloads-9Md3LxSxC-part-1/2024-03-10 HBMC DES A 1030am-0055.jpg
+Processing /mnt/clientDownloads-9Md3LxSxC-part-1/2024-03-10 HBMC DES A 1030am-0056.jpg - Image Number: 2
+/mnt/clientDownloads-9Md3LxSxC-part-1/2024-03-10 HBMC DES A 1030am-0056.jpg
+030
+Processing /mnt/clientDownloads-9Md3LxSxC-part-1/2024-03-10 HBMC DES A 1030am-0057.jpg - Image Number: 3
+/mnt/clientDownloads-9Md3LxSxC-part-1/2024-03-10 HBMC DES A 1030am-0057.jpg
+m
+030
 ```
