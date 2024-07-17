@@ -127,3 +127,10 @@ Processing /mnt/clientDownloads-9Md3LxSxC-part-1/2024-03-10 HBMC DES A 1030am-00
 m
 030
 ```
+
+- read exif "Keywords" field and verify that it worked:
+
+```
+~/git/ericxnelson/motoOCR$ exiftool /data0/test-pics/clientDownloads-9Md3LxSxC-part-1/2024-03-10\ HBMC\ DES\ A\ 1030am-0076.jpg | grep Keywords
+Keywords                        : D326, EU
+```
