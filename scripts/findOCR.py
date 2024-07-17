@@ -6,7 +6,7 @@ from exiftool import ExifToolHelper
 
 sourcefile = sys.argv[1]
 
-ocr = PaddleOCR(use_angle_cls=True, lang='en', warmup=True, use_gpu=True, ocr_version='PP-OCRv3', structure_version='PP-StructureV3', mode='structure', show_log=True) # need to run only once to download and load model into memory
+ocr = PaddleOCR(use_angle_cls=True, lang='en', warmup=True, use_gpu=True, ocr_version='PP-OCRv3', structure_version='PP-StructureV3', mode='structure', show_log=False) # need to run only once to download and load model into memory
 
 result = ocr.ocr(sourcefile, cls=True)
 
