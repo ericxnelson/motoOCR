@@ -33,8 +33,11 @@ This repo has a dockerfile to manage dependencies and has a few scripts to detec
  => exporting to image                                                                                                                                      19.5s 
  => => exporting layers                                                                                                                                     19.5s 
  => => writing image sha256:19513d0dea0c4455e1a2930aebcdaddbf9c1d30e02b8e4ea8f4e375fb6a03f64                                                                 0.0s 
- => => naming to docker.io/library/motofoto:latest                                                                                                           0.0s ```
-  - run script to process jpgs in dir
+ => => naming to docker.io/library/motofoto:latest                                                                                                           0.0s 
+```
+
+- run script to process jpgs in dir
+
 
 ```motoOCR$ sudo docker run -v /mnt:/mnt -it motofoto:latest bash
 root@36abc9bcede1:/# 
